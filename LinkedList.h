@@ -51,7 +51,7 @@ public:
 			}
 		}
 		if (isUnique){
-		cout << "Value is unique. Adding to list" << endl;
+		//cout << "Value is unique. Adding to list" << endl;
 		Node *ptr = head;
 		head = new Node(value);
 		head->next = ptr;
@@ -138,6 +138,9 @@ public:
 	{
 		cout << "In remove, searching for: "<< value <<endl;
 		Node *ptr = head;
+		if(num_items == 0) {
+			return;
+		}
 
 		//check first value
 		if (value == ptr->data){
@@ -187,6 +190,7 @@ public:
 			head = head->next;
 			delete current;
 		}
+		num_items = 0;
 
 	};
 
@@ -238,7 +242,8 @@ public:
 	{
 		stringstream ss;
 		for(Node *ptr =head; ptr != NULL; ptr = ptr->next){
-			ss <<"ptr "<<ptr<<" val "<<ptr->data<<" next "<<ptr->next<<endl;
+			//ss <<"ptr "<<ptr<<" val "<<ptr->data<<" next "<<ptr->next<<endl;
+			ss << ptr->data << " ";
 		}
 		
 		return (ss.str());

@@ -6,132 +6,62 @@ at 1 out_of_range
 insertTail lazy
 size 1
 printList
-  ptr 0x560f2fdddc50 val lazy next 0
-
+  lazy 
 insertHead lazy
 size 1
 printList
-  ptr 0x560f2fdddc50 val lazy next 0
-
+  lazy 
 insertAfter dog. lazyy
 size 1
 printList
-  ptr 0x560f2fdddc50 val lazy next 0
-
+  lazy 
 insertAfter dog. lazy
 size 2
 printList
-  ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  lazy dog. 
 insertTail dog.
 size 2
 printList
-  ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  lazy dog. 
 insertHead fox
 size 3
 printList
-  ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  fox lazy dog. 
 insertHead brown
 size 4
 printList
-  ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  brown fox lazy dog. 
 insertHead quick
 size 5
 printList
-  ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  quick brown fox lazy dog. 
 insertHead The
 size 6
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox lazy dog. 
 insertAfter quick brown
 size 6
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox lazy dog. 
 insertTail fox
 size 6
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox lazy dog. 
 insertAfter the fox
 size 7
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdde0a0
-ptr 0x560f2fdde0a0 val the next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox the lazy dog. 
 insertAfter jumps fox
 size 8
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdde220
-ptr 0x560f2fdde220 val jumps next 0x560f2fdde0a0
-ptr 0x560f2fdde0a0 val the next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox jumps the lazy dog. 
 insertAfter over jumps
 size 9
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdde220
-ptr 0x560f2fdde220 val jumps next 0x560f2fdde3d0
-ptr 0x560f2fdde3d0 val over next 0x560f2fdde0a0
-ptr 0x560f2fdde0a0 val the next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox jumps over the lazy dog. 
 size 9
 printList
-  ptr 0x560f2fdddf50 val The next 0x560f2fddde30
-ptr 0x560f2fddde30 val quick next 0x560f2fdddd40
-ptr 0x560f2fdddd40 val brown next 0x560f2fdddd10
-ptr 0x560f2fdddd10 val fox next 0x560f2fdde220
-ptr 0x560f2fdde220 val jumps next 0x560f2fdde3d0
-ptr 0x560f2fdde3d0 val over next 0x560f2fdde0a0
-ptr 0x560f2fdde0a0 val the next 0x560f2fdddc50
-ptr 0x560f2fdddc50 val lazy next 0x560f2fdddc80
-ptr 0x560f2fdddc80 val dog. next 0
-
+  The quick brown fox jumps over the lazy dog. 
 at 0 The
 at 1 quick
 at 2 brown
