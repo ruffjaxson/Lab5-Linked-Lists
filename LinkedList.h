@@ -243,7 +243,10 @@ public:
 		stringstream ss;
 		for(Node *ptr =head; ptr != NULL; ptr = ptr->next){
 			//ss <<"ptr "<<ptr<<" val "<<ptr->data<<" next "<<ptr->next<<endl;
-			ss << ptr->data << " ";
+			ss << ptr->data;
+			if (ptr->next != NULL){
+				ss << " ";
+			}
 		}
 		
 		return (ss.str());
