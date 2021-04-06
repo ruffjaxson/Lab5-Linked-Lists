@@ -107,7 +107,24 @@ public:
 	*/
 	virtual void insertAfter(T value, T insertionNode)
 	{
-		
+		bool isUnique = true;
+		for(Node *ptr=head; ptr != NULL; ptr=ptr->next) {
+			if (value == ptr-> data){
+				cout << "Not a unique value. Won't add to tail" << endl;
+				isUnique = false;
+			}
+		}
+
+		if (isUnique){
+			for(Node *ptr=head; ptr != NULL; ptr=ptr->next){
+				if(ptr->data == insertionNode){
+					Node *newnode = new Node(value,NULL);
+					newnode->next = ptr->next;
+					ptr->next = newnode;
+					num_items++;
+				}
+			}
+		}
 	};
 
 	/*
@@ -205,7 +222,7 @@ public:
 	*/
 	virtual int size()
 	{
-		
+		return num_items;
 	};
 
 	/*

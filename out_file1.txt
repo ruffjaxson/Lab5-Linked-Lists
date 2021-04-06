@@ -1,0 +1,24 @@
+insertHead 1
+insertTail 2
+insertAfter 3 2
+size 3
+printList
+  ptr 0x560f2fddd720 val 1 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 2 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 3 next 0
+
+insertHead 0
+insertTail 4
+insertAfter 0 50
+insertAfter 50 51
+size 5
+printList
+  ptr 0x560f2fddda20 val 0 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 1 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 2 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 3 next 0x560f2fddda40
+ptr 0x560f2fddda40 val 4 next 0
+
+size 5
+insertHead 1000
+size 6

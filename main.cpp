@@ -34,23 +34,31 @@ int main() {
 
 	//TEST CODE HEREEEEEEEEEEEEEEEEEEEEEEEEEE
 	
-	iLL = new LinkedList<int>();
-	iLL->clear();
-	iLL->insertHead(10);
-	//cout << iLL->toString()<<endl;
-	iLL->insertHead(20);
-	iLL->insertHead(20);
-	//cout << iLL->toString()<<endl;
-	iLL->insertTail(50);
-	cout << iLL->toString()<<endl;
-	iLL->insertTail(20);
-	cout << "Value at 2: " << iLL->at(2) << endl;;
-	iLL->remove(10);
-	cout << iLL->toString()<<endl;
-	iLL->clear();
-	cout << iLL->toString()<<endl;
+	// iLL = new LinkedList<int>();
+	// cout << "Size of list: " << iLL->size() << endl;
+	// iLL->clear();
+	// iLL->insertHead(10);
+	// //cout << iLL->toString()<<endl;
+	// iLL->insertHead(20);
+	// iLL->insertHead(20);
+	// //cout << iLL->toString()<<endl;
+	// iLL->insertTail(50);
+	// iLL->insertTail(55);
+	// iLL->insertTail(60);
+	// iLL->insertTail(65);
+	// cout << "ATTEMPTING INSERT: " << endl;
+	// iLL->insertAfter(100, 50);
+	// cout << "Size of list: " << iLL->size() << endl;
+	// cout << "Printing list: " << endl << iLL->toString()<<endl << endl;
+	// iLL->insertTail(20);
+	// cout << "Value at 2: " << iLL->at(2) << endl;;
+	// iLL->remove(10);
+	// cout << "Size of list: " << iLL->size() << endl;
+	// cout << "Printing list: " << endl << iLL->toString()<<endl << endl;
+	// iLL->clear();
+	// cout << "Printing list: " << endl << iLL->toString()<<endl << endl;
 
-	return 0;
+	//return 0;
 	//END TEST CODE
 
 	for (int i = 0; i < NUM_FILES; i++) {

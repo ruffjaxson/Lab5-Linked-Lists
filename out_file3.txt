@@ -1,0 +1,131 @@
+insertHead 10
+insertHead 9
+insertHead 8
+insertHead 7
+insertHead 6
+insertHead 5
+insertHead 4
+insertHead 3
+insertHead 2
+insertHead 1
+insertHead 0
+insertAfter -1 1
+insertAfter 9999 0
+insertAfter 12 10
+size 14
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdde640
+ptr 0x560f2fdde640 val 9999 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdde620
+ptr 0x560f2fdde620 val -1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 10 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove -1
+size  13
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdde640
+ptr 0x560f2fdde640 val 9999 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 10 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove -1
+size  13
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdde640
+ptr 0x560f2fdde640 val 9999 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 10 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove 15
+size 13
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdde640
+ptr 0x560f2fdde640 val 9999 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 10 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove 9999
+size  12
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fddd760
+ptr 0x560f2fddd760 val 10 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove 10
+size 11
+printList
+  ptr 0x560f2fdddc90 val 0 next 0x560f2fdddc70
+ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+remove 0
+size 10
+printList
+  ptr 0x560f2fdddc70 val 1 next 0x560f2fdddc50
+ptr 0x560f2fdddc50 val 2 next 0x560f2fdde0a0
+ptr 0x560f2fdde0a0 val 3 next 0x560f2fddd700
+ptr 0x560f2fddd700 val 4 next 0x560f2fdddab0
+ptr 0x560f2fdddab0 val 5 next 0x560f2fddda90
+ptr 0x560f2fddda90 val 6 next 0x560f2fddda20
+ptr 0x560f2fddda20 val 7 next 0x560f2fddd720
+ptr 0x560f2fddd720 val 8 next 0x560f2fddd740
+ptr 0x560f2fddd740 val 9 next 0x560f2fdde660
+ptr 0x560f2fdde660 val 12 next 0
+
+clear
+size 10
+printList
+  
