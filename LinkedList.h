@@ -16,20 +16,20 @@ private:
 	   data(the_data) {next = next_val;}
 	};
 	
-	Node *mylist;
+	Node *head;
 	int num_items;
 
 public:
 
 	LinkedList(void) {
 		cout << "In constructor" << endl;
-		mylist = NULL;
+		head = NULL;
 		num_items = 0;
 	};
 	virtual ~LinkedList(void) {
-		while(mylist != NULL) {
-			Node *current = mylist;
-			mylist = mylist->next;
+		while(head != NULL) {
+			Node *current = head;
+			head = head->next;
 			delete current;
 		}
 	};
@@ -43,9 +43,11 @@ public:
 	*/
 	virtual void insertHead(T value)
 	{
-		Node *ptr = mylist;
-		mylist = new Node(value);
-		mylist->next = ptr;
+		
+
+		Node *ptr = head;
+		head = new Node(value);
+		head->next = ptr;
 		cout << "In insertHead" << endl;
 
 	};
@@ -60,9 +62,9 @@ public:
 	virtual void insertTail(T value)
 	{
 		cout << "In insertTail"<<endl;
-		Node *ptr = mylist;
-		if(mylist == NULL){
-			mylist = new Node(value, NULL);
+		Node *ptr = head;
+		if(head == NULL){
+			head = new Node(value, NULL);
 		} else {
 			while(ptr != NULL){
 				//cout << ptr<<" data "<<ptr->data<<" next "<<ptr->next<<endl;
@@ -101,13 +103,13 @@ public:
 	virtual void remove(T value)
 	{
 		cout << "In remove, searching for: "<< value <<endl;
-		Node *ptr = mylist;
+		Node *ptr = head;
 
 		//check first value
 		if (value == ptr->data){
 					cout << "Found value at first node: " << ptr->data << ", deleting now " << endl;
 					Node *current = ptr;
-					mylist = current->next;
+					head = current->next;
 
 					delete current;
 					num_items--;
@@ -116,7 +118,7 @@ public:
 		else {
 				//check the rest 
 				cout << "Checking list:" << endl;
-				ptr = mylist;
+				ptr = head;
 				while(ptr->next != NULL) {
 					if (value == ptr->next->data){
 						cout << "Gotcha. Deleting now" << endl;
@@ -181,7 +183,7 @@ public:
 	virtual string toString()
 	{
 		stringstream ss;
-		for(Node *ptr =mylist; ptr != NULL; ptr = ptr->next){
+		for(Node *ptr =head; ptr != NULL; ptr = ptr->next){
 			ss <<"ptr "<<ptr<<" val "<<ptr->data<<" next "<<ptr->next<<endl;
 		}
 		
