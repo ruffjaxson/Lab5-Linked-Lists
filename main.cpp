@@ -32,60 +32,73 @@ int main() {
 	LinkedList<int>* iLL = NULL;//the integer linked list
 	LinkedList<string>* sLL = NULL;//the string linked list
 
-	//TEST CODE HEREEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+	//TEST CODE HEREEEEEEEEEEEEEEEEEEEEEEEEEE
+	iLL = new LinkedList<int>();
+	iLL->insertHead(10);
+	//cout << iLL->toString()<<endl;
+	iLL->insertHead(20);
+	iLL->insertHead(30);
+	//cout << iLL->toString()<<endl;
+	iLL->insertTail(50);
+	cout << iLL->toString()<<endl;
+	iLL->remove(10);
+	cout << iLL->toString()<<endl;
 
-	// for (int i = 0; i < NUM_FILES; i++) {
-	// 	ifs.open(fileArray[i]); // open the file to read from
-	// 	ofs.open("out_" + fileArray[i]); // open the file to write to
+	return 0;
+	//END TEST CODE
 
-	// 	if (!ifs.is_open()) { // if the file did not open, there was no such file
-	// 		std::cout << "File " << i + 1 << " could not open, please check your lab setup" << std::endl;
-	// 	}
-	// 	else {
-	// 		std::cout << "Reading file" << i + 1 << ".txt..." << std::endl;
-	// 	}
+	for (int i = 0; i < NUM_FILES; i++) {
+		ifs.open(fileArray[i]); // open the file to read from
+		ofs.open("out_" + fileArray[i]); // open the file to write to
 
-	// 	ta::getline(ifs, temp); // get the first instruction
-	// 	if (temp == "STRING") { // first line of file determines the type of the linked list, either string or int
-	// 		isString = true;//set the isString to true
-	// 		sLL = new LinkedList<string>();
-	// 		std::cout << "'isString' flag set to true" << std::endl;
-	// 		std::cout << "The LinkedList for file " << i + 1 << " will contain strings" << std::endl;
-	// 	}
-	// 	else { //the LL will hold ints
-	// 		isString = false;
-	// 		iLL = new LinkedList<int>();
-	// 		std::cout << "'isString' flag set to false" << std::endl;
-	// 		std::cout << "The LinkedList for file " << i + 1 << " will contain ints" << std::endl;
-	// 	}
+		if (!ifs.is_open()) { // if the file did not open, there was no such file
+			std::cout << "File " << i + 1 << " could not open, please check your lab setup" << std::endl;
+		}
+		else {
+			std::cout << "Reading file" << i + 1 << ".txt..." << std::endl;
+		}
 
-	// 	std::cout << "Beginning out_file" << i + 1 << ".txt write" << std::endl;
-	// 	while (ta::getline(ifs, temp)) { // while there are more instructions to get,
-	// 		try {
-	// 			if (isString) {
-	// 				parse_instruction(temp, ofs, sLL); // parse the instructions using string LinkedList
-	// 			}
-	// 			else {
-	// 				parse_instruction(temp, ofs, iLL); // parse the instructions using int LinkedList
-	// 			}
-	// 		}
-	// 		catch (...) {
-	// 			std::cout << "An exception was thrown that shouldn't have been.\n";
-	// 			//return 0;//end the program
-	// 		}
-	// 	}
-	// 	std::cout << "File write complete" << std::endl << std::endl;
-	// 	if (iLL != NULL) {
-	// 		delete iLL;
-	// 		iLL = NULL;
-	// 	}
-	// 	if (sLL != NULL) {
-	// 		delete sLL;
-	// 		sLL = NULL;
-	// 	}
-	// 	ifs.close();
-	// 	ofs.close();
-	// }
+		ta::getline(ifs, temp); // get the first instruction
+		if (temp == "STRING") { // first line of file determines the type of the linked list, either string or int
+			isString = true;//set the isString to true
+			sLL = new LinkedList<string>();
+			std::cout << "'isString' flag set to true" << std::endl;
+			std::cout << "The LinkedList for file " << i + 1 << " will contain strings" << std::endl;
+		}
+		else { //the LL will hold ints
+			isString = false;
+			iLL = new LinkedList<int>();
+			std::cout << "'isString' flag set to false" << std::endl;
+			std::cout << "The LinkedList for file " << i + 1 << " will contain ints" << std::endl;
+		}
+
+		std::cout << "Beginning out_file" << i + 1 << ".txt write" << std::endl;
+		while (ta::getline(ifs, temp)) { // while there are more instructions to get,
+			try {
+				if (isString) {
+					parse_instruction(temp, ofs, sLL); // parse the instructions using string LinkedList
+				}
+				else {
+					parse_instruction(temp, ofs, iLL); // parse the instructions using int LinkedList
+				}
+			}
+			catch (...) {
+				std::cout << "An exception was thrown that shouldn't have been.\n";
+				//return 0;//end the program
+			}
+		}
+		std::cout << "File write complete" << std::endl << std::endl;
+		if (iLL != NULL) {
+			delete iLL;
+			iLL = NULL;
+		}
+		if (sLL != NULL) {
+			delete sLL;
+			sLL = NULL;
+		}
+		ifs.close();
+		ofs.close();
+	}
 	std::cout << "end" << std::endl; // indicate that the program has successfuly executed all instructions
 	return 0;
 }
