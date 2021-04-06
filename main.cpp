@@ -33,15 +33,21 @@ int main() {
 	LinkedList<string>* sLL = NULL;//the string linked list
 
 	//TEST CODE HEREEEEEEEEEEEEEEEEEEEEEEEEEE
+	
 	iLL = new LinkedList<int>();
+	iLL->clear();
 	iLL->insertHead(10);
 	//cout << iLL->toString()<<endl;
 	iLL->insertHead(20);
-	iLL->insertHead(30);
+	iLL->insertHead(20);
 	//cout << iLL->toString()<<endl;
 	iLL->insertTail(50);
 	cout << iLL->toString()<<endl;
+	iLL->insertTail(20);
+	cout << "Value at 2: " << iLL->at(2) << endl;;
 	iLL->remove(10);
+	cout << iLL->toString()<<endl;
+	iLL->clear();
 	cout << iLL->toString()<<endl;
 
 	return 0;

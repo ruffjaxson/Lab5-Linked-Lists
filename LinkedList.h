@@ -43,12 +43,20 @@ public:
 	*/
 	virtual void insertHead(T value)
 	{
-		
-
+		bool isUnique = true;
+		for(Node *ptr=head; ptr != NULL; ptr=ptr->next) {
+			if (value == ptr-> data){
+				cout << "Not a unique value. Won't add to head" << endl;
+				isUnique = false;
+			}
+		}
+		if (isUnique){
+		cout << "Value is unique. Adding to list" << endl;
 		Node *ptr = head;
 		head = new Node(value);
 		head->next = ptr;
-		cout << "In insertHead" << endl;
+		num_items++;
+		}
 
 	};
 
@@ -61,7 +69,15 @@ public:
 	*/
 	virtual void insertTail(T value)
 	{
-		cout << "In insertTail"<<endl;
+		bool isUnique = true;
+		for(Node *ptr=head; ptr != NULL; ptr=ptr->next) {
+			if (value == ptr-> data){
+				cout << "Not a unique value. Won't add to tail" << endl;
+				isUnique = false;
+			}
+		}
+
+		if (isUnique){
 		Node *ptr = head;
 		if(head == NULL){
 			head = new Node(value, NULL);
@@ -77,6 +93,7 @@ public:
 			}
 		}
 		num_items++;
+		}
 	};
 
 	/*
@@ -117,11 +134,11 @@ public:
 				}
 		else {
 				//check the rest 
-				cout << "Checking list:" << endl;
+				//cout << "Checking list:" << endl;
 				ptr = head;
 				while(ptr->next != NULL) {
 					if (value == ptr->next->data){
-						cout << "Gotcha. Deleting now" << endl;
+						//cout << "Gotcha. Deleting now" << endl;
 						Node *current = ptr->next;
 						ptr->next = ptr->next->next;
 						delete current;
@@ -129,7 +146,7 @@ public:
 						break;
 					}
 					else {
-						cout << "Value here is: " << ptr->next->data << ", not " << value << ". Moving to ptr->next" << endl;
+						//cout << "Value here is: " << ptr->next->data << ", not " << value << ". Moving to ptr->next" << endl;
 						ptr = ptr->next;
 					}
 				
@@ -145,7 +162,15 @@ public:
 	*/
 	virtual void clear()
 	{
-		
+		if (head == NULL){
+			cout << "List is empty" << endl;
+		}
+		while(head != NULL) {
+			Node *current = head;
+			head = head->next;
+			delete current;
+		}
+
 	};
 
 	/*
@@ -158,7 +183,19 @@ public:
 	*/
 	virtual T at(int index)
 	{
-		
+		if(index >= num_items || index < 0) {
+			throw std::out_of_range("At Error");
+		} else {
+			Node *ptr = head;
+			for(int i = 0; i <= index; i++) {
+				//cout << "["<<i<<"]="<<ptr->data<<endl;
+		  		if(i == (index)) { 
+		  			return(ptr->data);
+		  		}else {
+		  			ptr = ptr->next;
+		  		}
+			}
+		}
 	};
 
 	/*
